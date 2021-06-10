@@ -1,0 +1,20 @@
+p {
+  margin: 0;
+}
+
+.ProseMirror {
+  padding: 24px;
+  border: 1px solid #333;
+}
+
+.ProseMirror-selectednode {
+  outline: 2px solid #8cf;
+}
+
+img.dinosaur {
+  height: 40px;
+  vertical-align: bottom;
+  border: 1px solid #0ae;
+  border-radius: 4px;
+  background: #ddf6ff;
+}
