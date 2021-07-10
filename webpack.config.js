@@ -35,26 +35,26 @@ module.exports = {
           filename: "static/[hash][ext][query]",
         },
       },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "esbuild-loader",
-        options: {
-          target: "es2015", // Syntax to compile to (see options below for possible values)
-        },
-      },
       // {
       //   test: /\.js$/,
       //   exclude: /node_modules/,
-      //   use: {
-      //     loader: "babel-loader",
-      //     options: {
-      //       cacheDirectory: true,
-      //       presets: ["@babel/preset-env"],
-      //       plugins: ["@babel/plugin-transform-runtime"],
-      //     },
+      //   loader: "esbuild-loader",
+      //   options: {
+      //     target: "es2015", // Syntax to compile to (see options below for possible values)
       //   },
       // },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            cacheDirectory: true,
+            presets: ["@babel/preset-env"],
+            plugins: ["@babel/plugin-transform-runtime"],
+          },
+        },
+      },
     ],
   },
 };
